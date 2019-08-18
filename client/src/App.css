@@ -24,6 +24,19 @@
   color: #61dafb;
 }
 
+.App-link:hover {
+  color: #bef1ff;
+}
+
+.link-container {
+  display: flex;
+  justify-content: center;
+}
+
+.link-container__element {
+  margin: 5px 5px 5px 5px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
