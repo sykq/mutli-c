@@ -19,3 +19,17 @@ after_success:
   - docker push sanp/multi-c-nginx
   - docker push sanp/multi-c-server
   - docker push sanp/multi-c-worker
+
+deploy:
+  provider: elasticbeanstalk
+  region: eu-central-1
+  app: multi-container
+  env: MultiContainer-env
+  bucket_name: elasticbeanstalk-eu-central-1-379144642287
+  bucket_path: multi-container
+  on:
+    branch: master
+  access_key_id:
+    secure: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: $AWS_SECRET_KEY
